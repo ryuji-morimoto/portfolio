@@ -1,6 +1,375 @@
 @charset "utf-8";
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
+section {
+  padding: 50px 0;
+}
+
+
+/*
+header
+*/
+.header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  background-color: rgb(117, 155, 156, 0.8);
+  width: 100%;
+  height: 4vw;
+}
+
+.title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5vw;
+  position: absolute;
+  left: 20px;
+  padding: 0;
+  margin: 0.9vw 0;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 0 5vw;
+  margin: 0.7vw;
+  font-size: 1.8vw;
+}
+
+a {
+  height: 4vw;
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  background-color: rgb(95, 128, 129, 0.8);
+}
+
+
+
+/*
+about
+*/
+.main-about {
+  padding: 20px;
+}
+
+.section-headline {
+  text-align: center;
+  font-size: 40px;
+}
+
+.paragraph {
+  text-align: center;
+}
+
+.chapter {
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+
+/*
+＜自己紹介＞
+*/
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.my-photo {
+  width: 25vw;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-right: 150px;
+}
+
+.text {
+  padding-bottom: 40px;
+  font-size: 20px;
+}
+
+.profile-text .item {
+  font-size: 23px;
+  border-bottom: 2px solid;
+}
+
+
+/*
+経歴
+*/
+.date {
+  font-size: 20px;
+  border-bottom: 2px solid;
+}
+
+.text-career {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.content {
+  padding-bottom: 30px;
+}
+
+.image {
+  width: 18vw;
+}
+
+
+/*
+経歴 -中学-
+*/
+.career-JHS {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+}
+
+.JHS-photo {
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+
+/*
+経歴 -高校-
+*/
+.career-HS {
+  display: flex;
+  justify-content: center;
+}
+
+.HS-photo {
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+
+/*
+経歴 -大学-
+*/
+.career-Univ {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+}
+
+.Univ-photo {
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+
+
+/*
+skill
+*/
+.main-skill {
+  padding-top: 4vw;
+  margin-top: -4vw;
+}
+
+.scroll-text {
+  text-align: end;
+  padding: 0;
+  margin-right: 8vw;
+  opacity: 0;
+}
+
+.scroll-text.is-animated {
+  animation: flash 2.3s linear infinite;
+}
+
+@keyframes flash {
+  0%,100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/*
+グラフの大枠部分
+*/
+.bar-graph-wrap {
+  background-color: #ffffff;
+  position: relative;
+  height: 350px;
+  width: 90vw;
+  border: 1px solid rgb(178, 178, 178);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+
+/*
+グラフの動き
+*/
+.bar-graph-wrap .graph {
+  position: absolute;
+  height: 50px;
+  left: 0;
+  margin: auto;
+  border-radius: 0 4px 4px 0 ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.bar-graph-wrap.is-animated .graph {
+  -webkit-animation: graphAnim 2s forwards;
+  animation: graphAnim 2s forwards;
+}
+
+
+/*
+グラフ内文字の縁取り
+*/
+.bar-graph-wrap .graph span {
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0, 0, 0, 0.2),
+               -1px 1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
+               0px 1px 0 rgba(0, 0, 0, 0.2),  0-1px 0 rgba(0, 0, 0, 0.2),
+               -1px 0 0 rgba(0, 0, 0, 0.2), 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/*
+各グラフの色や長さ、位置
+*/
+.bar-graph-wrap .graph.HTML {
+  background: #03a9f4;
+  width: 60%;
+  top: 30px;
+  opacity: 0;
+}
+
+.bar-graph-wrap .graph.CSS {
+  background: #f43303;
+  width: 40%;
+  top: 110px;
+  opacity: 0;
+}
+
+.bar-graph-wrap .graph.Python {
+  background: #37f403;
+  width: 20%;
+  bottom: 110px;
+  opacity: 0;
+}
+
+.bar-graph-wrap .graph.Java {
+  background: #00f8f0;
+  width: 20%;
+  bottom: 30px;
+  opacity: 0;
+}
+
+/*
+グラフの動き方
+*/
+@keyframes graphAnim {
+  0% {
+    opacity: 1;
+    -webkit-fransform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+
+/*
+works
+*/
+.main-works {
+  padding-top: 4vw;
+  margin-top: -4vw;
+}
+
+.production-items {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  margin: 0;
+}
+
+.production-item {
+  width: 18vw;
+  margin: 0 3%;
+}
+
+.production-image {
+  width: 18vw;
+  height: 12vw;
+}
+
+.production-title {
+  font-size: 2.5vw;
+  text-align: center;
+  padding: 0;
+  margin: 0.5em;
+  border-bottom: 1.5px solid;
+}
+
+.production-text {
+  font-size: 1.5vw;
+  text-align: left;
+  margin: 0.5em;
+}
+
+
+
+
+
+
+
+/*
+contact
+*/
+.main-contact {
+  padding-top: 4vw;
+  margin-top: -4vw;
+}
+
+.test2 {
+  width: 20vw;
+  height: 13.3vw;
+}
+
+
+
+/*
+footer
+*/
+.copyright {
+  text-align: center;
+}
