@@ -1,4 +1,4 @@
-<!D<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,74 +7,146 @@
   <title>Ryuji's Portfolio</title>
   <meta name="descripton" content="RyujiのPortfolioです">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"  rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/sanitize.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+  <div class="header">
+    <h3 class="title">Ryuji's Portfolio</h3>
+
+    <ul class="menu-list">
+      <a href="#about"><li class="about menu-item">about</li></a>
+      <a href="#skill"><li class="skill menu-item">skill</li></a>
+      <a href="#works"><li class="works menu-item">Works</li></a>
+      <a href="#contact"><li class="contact menu-item">Contact</li></a>
+    </ul>
+
+  </div>
 
 
-  <section class="header">
-    <h1>Ryuji's Portfolio</h1>
-    <ul>
-      <li>About</li>
-      <li>Skill</li>
-      <li>Works</li>
-      <li>Contact</li>
+  <section id="about" class="main-about">
+    <h1 class="section-headline">About Me</h1>
+
+    <div class="paragraph">
+      <p class="chapter">＜ 自己紹介 ＞</p>
+      <div class="profile">
+        <p class="profile-image">
+          <img class="my-photo" src="./assets/images/my-photo.jpg" alt="Ryuji Morimotoの写真が表示されます" >
+        </p>
+        <div class="profile-text">
+          <p class="name item">名前</p>
+          <p class="name text">森本 竜二 (Ryuji Morimoto)</p>
+
+          <p class="DOB item">生年月日</p>
+          <p class="DOB text">2001年4月11日</p>
+
+          <p class="hobby item">趣味</p>
+          <p class="hobby text">スポーツ観戦,　漫画</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="paragraph">
+      <p class="chapter">＜ 経歴 ＞</p>
+      <div class="career">
+        <div class="content career-JHS">
+          <div class="career-JHS-text">
+            <p class="date">2014年～2016年</p>
+            <p class="text-career">
+              ・地元の中学校に入学。陸上部で棒高跳びと出会う。<br>
+              全日本中学校陸上選手権大会 8位<br><br>
+              ・明確な答えを導く数学の面白さを知る。
+            </p>
+          </div>
+          <p class="career-JHS-image">
+            <img class="JHS-photo image" src="./assets/images/JHS-photo.jpg" alt="中学生時代の写真" >
+          </p>
+        </div>
+
+        <div class="content career-HS">
+          <p class="career-HS-image">
+            <img class="HS-photo image" src="./assets/images/HS-photo.jpg" alt="高校生時代の写真" >
+          </p>
+          <div class="career-HS-text">
+            <p class="date">2017年～2019年</p>
+            <p class="text-career">
+              ・棒高跳びで推薦を受け、木更津総合高等学校に入学。<br>
+              U20日本陸上選手権大会 11位<br><br>
+              ・理系の世界に飛び込むことを決意。<br>
+              選択科目は全て数学や物理など理系科目を選択。
+            </p>
+          </div>
+        </div>
+
+        <div class="content career-Univ">
+          <div class="career-Univ-text">
+            <p class="date">2020年～2022年</p>
+            <p class="text-career">
+              ・日本大学 生産工学部 電気電子工学科に進学。<br>
+              Pythonを用いてフラクタル画像を生成するゼミに所属。
+            </p>
+          </div>
+          <p class="career-Univ-image">
+            <img class="Univ-photo image" src="./assets/images/Univ-photo.jpg" alt="フラクタル画像の写真" >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="skill" class="main-skill">
+    <h1 class="section-headline">Skill</h1>
+
+    <p class="scroll-text">▼&nbsp;Please&nbsp;scroll</p>
+    <div class="bar-graph-wrap">
+      <div class="graph HTML">
+        <span class="name">HTML</span>
+        <span class="percentage">60</span>
+      </div>
+      <div class="graph CSS">
+        <span class="name">CSS</span>
+        <span class="percentage">40</span>
+       </div>
+      <div class="graph Python">
+        <span class="name">Python</span>
+        <span class="percentage">20</span>
+      </div>
+      <div class="graph Java">
+        <span class="name">Java</span>
+        <span class="percentage">20</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="works" class="main-works">
+    <h1 class="section-headline">Works</h1>
+    <ul class="production-items">
+      <li class="production-item">
+        <!-- 画像の適正比率は3：2 -->
+        <img class="production-image" src="https://dummyimage.com/600x400/000/fff.jpg" alt="portfolioの写真">
+        <p class="production-title">Portfolio</p>
+        <p class="production-text">ポートフォリオサイトを製作しました</p>
+      </li>
     </ul>
   </section>
 
-  <section class="main_About">
-    <h1>About Me</h1>
-    <figure>
-      <img src="https://github.com/ryuji-morimoto/portfolio/blob/main/assets/images/my%20photo.jpg?raw=true" alt="Ryuji Morimotoの写真が表示されます" width="300px" height="300px">
-      <figcaption>
-        名前：森本竜二<br>
-        経歴：
-      </figcaption>
-    </figure>
+
+  <section id="contact" class="main-contact">
+    <h1 class="section-headline">Contact Me</h1>
   </section>
 
-  <section class="main_Skill">
-    <h1>Skill</h1>
-    <figure>
-      <img src="" alt="">
-      <figcaption>
-        
-      </figcaption>
-    </figure>
-  </section>
-
-  <section class="main_Works">
-    <h1>Works</h1>
-    <figure>
-      <img src="" alt="">
-      <figcaption>
-        作品の製作中です。<br>
-        完成後に記載します。
-      </figcaption>
-    </figure>
-  </section>
-
-  <section class="main_Contact">
-    <h1>Contact Me</h1>
-    <figure>
-      <img src="" alt="">
-      <figcaption>
-        
-      </figcaption>
-    </figure>
-  </section>
 
 
   <footer>
-    <p>© 2022 Ryuji Morimoto All Rights Reserved.</p>
+    <p class="copyright">© 2022 Ryuji Morimoto All Rights Reserved.</p>
   </footer>
 
   <script src="./assets/js/app.js"></script>
+
 </body>
 </html>
