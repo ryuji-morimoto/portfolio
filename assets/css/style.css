@@ -347,11 +347,6 @@ works
 }
 
 
-
-
-
-
-
 /*
 contact
 */
@@ -365,6 +360,72 @@ contact
   height: 13.3vw;
 }
 
+
+.form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.form-item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+.form-label,
+.form-input {
+	padding: 10px;
+}
+.form-label {
+	width: 90%;
+}
+.form-input {
+	width: 90%;
+	font-size: 16px;
+	border: solid 1px #333;
+	border-radius: 4px;
+}
+.form-input:focus-visible {
+	outline: green auto 1px;
+}
+.form-required {
+  font-size: 0.8em;
+	color: red;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.form-input {
+	height: 160px;
+}
+.form-submit {
+	text-align: center;
+}
+.form-submit button {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: green;
+	border: solid 1px green;
+	border-radius: 4px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.form-submit button:hover {
+	color: green;
+	background-color: transparent;
+}
+
+@media (min-width: 640px) {
+	.form-item {
+		flex-wrap: nowrap;
+	}
+	.form-label {
+		width: 40%;
+	}
+	.form-input {
+		width: 55%;
+	}
+}
 
 
 /*

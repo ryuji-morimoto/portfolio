@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryuji's Portfolio</title>
-  <meta name="descripton" content="RyujiのPortfolioです">
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://ryuji-morimoto.github.io/portfolio/assets/css/sanitize.css">
-  <link rel="stylesheet" href="https://ryuji-morimoto.github.io/portfolio/assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/sanitize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -138,8 +137,30 @@
 
   <section id="contact" class="main-contact">
     <h1 class="section-headline">Contact Me</h1>
-  </section>
+    <p style="text-align: center; margin: 40px auto">お気軽にお問い合わせください。</p>
 
+    <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfO3Z8HVN6oR3vdERnQz_EFz4kD8ilQtmEgBajzWa9KpKWww/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <div class="form-item">
+        <label class="form-label" for="field-name">名前・会社名<span class="form-required">※必須</span></label>
+        <input name="entry.2005620554" id="field-name" class="form-input" placeholder="your name" type="text" required="required"/>
+      </div>
+
+      <div class="form-item">
+        <label class="form-label" for="field-mail">メールアドレス<span class="form-required">※必須</span></label>
+        <input name="entry.1045781291" id="field-mail" class="form-input" placeholder="sample@gmail.com" type="email" required="required"/>
+      </div>
+
+      <div class="form-item">
+        <label class="form-label" for="field-message">メッセージ<span class="form-required">※必須</span></label>
+        <textarea name="entry.839337160" id="field-message" class="form-input" placeholder="お問い合わせ内容"></textarea>
+      </div>
+      
+
+      <div class="form-submit">
+        <button type="submit">送信する</button>
+      </div>
+    </form>
+  </section>
 
 
   <footer>
@@ -147,6 +168,14 @@
   </footer>
 
   <script src="./assets/js/app.js"></script>
-
+  <script type="text/javascript">
+    let submitted = false;
+  </script>
+  <iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display: none"
+    onload="if(submitted){window.location='THANKSページのURL';}">
+  </iframe>
 </body>
 </html>
