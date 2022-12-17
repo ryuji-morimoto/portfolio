@@ -381,10 +381,20 @@ works
   opacity: 0;
 }
 
+.image-frame {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.production-item img:hover {
+  transform:scale(1.2, 1.2);
+  transition:0.5s all;
+}
+
 .production-image {
   width: 24vw;
   height: 16vw;
-  border-radius: 20px;
 }
 
 .production-title {
