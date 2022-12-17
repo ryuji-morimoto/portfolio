@@ -1,6 +1,3 @@
-
-
-
 window.addEventListener('scroll', function () {
 
   var scroll = window.scrollY; //スクロール量を取得
@@ -22,11 +19,11 @@ window.addEventListener('scroll', function () {
   else if (scroll > main_skill - windowHeight / 1.5) {
     document.body.style.backgroundColor = '#8be871'; //skillの背景色は#8be871 緑
   }
-  else if (scroll > main_about - windowHeight/1.1) {
-    document.body.style.backgroundColor = '#b6e6e4'; //aboutの背景色は#b6e6e4 青
+  else if (scroll > main_about - windowHeight/1.4) {
+    document.body.style.backgroundColor = '#b6e6e4'; //aboutの背景色は#b6e6e4 水色
   }
   else {
-    document.body.style.backgroundColor = '#8bb5b3'; //topの背景色は#b728da 紫
+    document.body.style.backgroundColor = '#8bb5b3'; //topの背景色は#8bb5b3 暗い水色
   }
 
 
