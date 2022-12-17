@@ -2,10 +2,13 @@
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  background-color: #8bb5b3;
+  transition: 1.5s;
 }
 
 section {
-  padding: 50px 0;
+  padding: 5vw 0;
+  margin: 0;
 }
 
 
@@ -25,9 +28,10 @@ header
 
 .title {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   position: absolute;
-  left: 20px;
+  width: 18vw;
+  left: 1.5vw;
   padding: 0;
   margin: 0.9vw 0;
 }
@@ -36,11 +40,13 @@ header
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  padding: 0;
+  width: 100vw;
+  padding: 0 0 0 10px;
   margin: 0;
 }
 
-.menu-item {
+li.menu-item {
+  display: list-item;
   padding: 0 5vw;
   margin: 0.7vw;
   font-size: 1.8vw;
@@ -57,12 +63,41 @@ a:hover {
 }
 
 
+/* 
+top
+*/
+.main-top {
+  padding-top: 4vw;
+  margin-top: -4vw;
+  width: 100vw;
+  height: 100vw;
+  position: relative;
+  text-align: center;
+}
+
+.heroMes {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  text-align: center;
+}
+
+.hero-particles {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
 
 /*
 about
 */
 .main-about {
-  padding: 20px;
+  padding-top: 4vw;
+  padding-bottom: 6vw;
+  margin-top: -4vw;
 }
 
 .section-headline {
@@ -116,7 +151,8 @@ about
 
 .text-career {
   font-size: 20px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .content {
@@ -178,6 +214,7 @@ skill
 */
 .main-skill {
   padding-top: 4vw;
+  padding-bottom: 6vw;
   margin-top: -4vw;
 }
 
@@ -204,14 +241,14 @@ skill
 
 /*
 グラフの大枠部分
+ -- 1つグラフ追加する際は高さを＋80px(グラフ高さ+隙間) --
 */
 .bar-graph-wrap {
   background-color: #ffffff;
   position: relative;
-  height: 350px;
+  height: 430px;
   width: 90vw;
   border: 1px solid rgb(178, 178, 178);
-  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   margin-left: auto;
   margin-right: auto;
@@ -228,21 +265,14 @@ skill
   left: 0;
   margin: auto;
   border-radius: 0 4px 4px 0 ;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 10px;
 }
 
 .bar-graph-wrap.is-animated .graph {
-  -webkit-animation: graphAnim 2s forwards;
-  animation: graphAnim 2s forwards;
+  animation: graphAnim 1.2s forwards;
 }
 
 
@@ -251,7 +281,7 @@ skill
 */
 .bar-graph-wrap .graph span {
   color: #fff;
-  font-size: 14px;
+  font-size: 2vw;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), -1px -1px 0 rgba(0, 0, 0, 0.2),
                -1px 1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
                0px 1px 0 rgba(0, 0, 0, 0.2),  0-1px 0 rgba(0, 0, 0, 0.2),
@@ -260,32 +290,44 @@ skill
 
 /*
 各グラフの色や長さ、位置
+ -- グラフの高さは50px 隙間は30px --
+*/
+/*
+githubの各言語カラー
+https://about-hiroppy.hatenadiary.org/entry/20150510/1431226488
 */
 .bar-graph-wrap .graph.HTML {
-  background: #03a9f4;
-  width: 60%;
+  background: #e44b23;
+  width: 70%;
   top: 30px;
   opacity: 0;
 }
 
 .bar-graph-wrap .graph.CSS {
-  background: #f43303;
-  width: 40%;
+  background: #563d7c;
+  width: 60%;
   top: 110px;
   opacity: 0;
 }
 
 .bar-graph-wrap .graph.Python {
-  background: #37f403;
-  width: 20%;
-  bottom: 110px;
+  background: #3572A5;
+  width: 40%;
+  top: 190px;
+  opacity: 0;
+}
+
+.bar-graph-wrap .graph.JavaScript {
+  background: #f1e05a;
+  width: 30%;
+  top: 270px;
   opacity: 0;
 }
 
 .bar-graph-wrap .graph.Java {
-  background: #00f8f0;
+  background: #b07219;
   width: 20%;
-  bottom: 30px;
+  top: 350px;
   opacity: 0;
 }
 
@@ -295,15 +337,14 @@ skill
 @keyframes graphAnim {
   0% {
     opacity: 1;
-    -webkit-fransform: translateX(-100%);
     transform: translateX(-100%);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
+
 
 
 /*
@@ -311,6 +352,7 @@ works
 */
 .main-works {
   padding-top: 4vw;
+  padding-bottom: 6vw;
   margin-top: -4vw;
 }
 
@@ -318,18 +360,20 @@ works
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0 30px;
+  padding: 20px 0 30px;
   margin: 0;
 }
 
 .production-item {
-  width: 18vw;
+  width: 24vw;
   margin: 0 3%;
+  opacity: 0;
 }
 
 .production-image {
-  width: 18vw;
-  height: 12vw;
+  width: 24vw;
+  height: 16vw;
+  border-radius: 20px;
 }
 
 .production-title {
@@ -344,6 +388,25 @@ works
   font-size: 1.5vw;
   text-align: left;
   margin: 0.5em;
+}
+
+.production-item.is-animated {
+  animation: zoomInAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes zoomInAnime{
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 
@@ -365,40 +428,49 @@ contact
 	max-width: 600px;
 	margin: 0 auto;
 }
+
 .form-item {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 20px;
 }
+
 .form-label,
 .form-input {
 	padding: 10px;
 }
+
 .form-label {
 	width: 90%;
 }
+
 .form-input {
 	width: 90%;
 	font-size: 16px;
 	border: solid 1px #333;
 	border-radius: 4px;
 }
+
 .form-input:focus-visible {
 	outline: green auto 1px;
 }
+
 .form-required {
   font-size: 0.8em;
 	color: red;
 	padding: 5px 5px;
 	margin: 0 0 0 18px;
 }
+
 textarea.form-input {
 	height: 160px;
 }
+
 .form-submit {
 	text-align: center;
 }
+
 .form-submit button {
 	font-size: 18px;
 	font-weight: bold;
@@ -410,6 +482,7 @@ textarea.form-input {
 	transition: 0.4s;
 	cursor: pointer;
 }
+
 .form-submit button:hover {
 	color: green;
 	background-color: transparent;

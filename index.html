@@ -13,12 +13,14 @@
 </head>
 
 <body>
+  <!-- header -->
   <div class="header">
     <h3 class="title">Ryuji's Portfolio</h3>
 
     <ul class="menu-list">
-      <a href="#about"><li class="about menu-item">about</li></a>
-      <a href="#skill"><li class="skill menu-item">skill</li></a>
+      <a href="#top"><li class="top menu-item">Top</li></a>
+      <a href="#about"><li class="about menu-item">About</li></a>
+      <a href="#skill"><li class="skill menu-item">Skill</li></a>
       <a href="#works"><li class="works menu-item">Works</li></a>
       <a href="#contact"><li class="contact menu-item">Contact</li></a>
     </ul>
@@ -26,6 +28,14 @@
   </div>
 
 
+  <!-- top -->
+  <div id="top" class="main-top">
+    <h1 class="heroMes">Welcome</h1>
+    <div id="particles-js" class="hero-particles"></div>
+  </div>
+
+
+  <!-- about -->
   <section id="about" class="main-about">
     <h1 class="section-headline">About Me</h1>
 
@@ -97,52 +107,60 @@
   </section>
 
 
+  <!-- skill -->
   <section id="skill" class="main-skill">
     <h1 class="section-headline">Skill</h1>
 
-    <p class="scroll-text">▼&nbsp;Please&nbsp;scroll</p>
-    <div class="bar-graph-wrap">
-      <div class="graph HTML">
+    <p class="scroll-text">▼ Please scroll</p>
+    <ul class="bar-graph-wrap">
+      <li class="graph HTML">
         <span class="name">HTML</span>
-        <span class="percentage">60</span>
-      </div>
-      <div class="graph CSS">
+        <span class="percentage">70</span>
+      </li>
+      <li class="graph CSS">
         <span class="name">CSS</span>
-        <span class="percentage">40</span>
-       </div>
-      <div class="graph Python">
+        <span class="percentage">60</span>
+      </li>
+      <li class="graph Python">
         <span class="name">Python</span>
-        <span class="percentage">20</span>
-      </div>
-      <div class="graph Java">
+        <span class="percentage">40</span>
+      </li>
+      <li class="graph JavaScript">
+        <span class="name">JavaScript</span>
+        <span class="percentage">30</span>
+      </li>
+      <li class="graph Java">
         <span class="name">Java</span>
         <span class="percentage">20</span>
-      </div>
+      </li>
     </div>
   </section>
 
 
+  <!-- works -->
   <section id="works" class="main-works">
     <h1 class="section-headline">Works</h1>
-    <ul class="production-items">
-      <li class="production-item">
+    <ul id="items" class="production-items">
+
+      <li id="item" class="production-item">
         <!-- 画像の適正比率は3：2 -->
         <img class="production-image" src="https://dummyimage.com/600x400/000/fff.jpg" alt="portfolioの写真">
         <p class="production-title">Portfolio</p>
         <p class="production-text">ポートフォリオサイトを製作しました</p>
       </li>
+
     </ul>
   </section>
 
 
+  <!-- contact -->
   <section id="contact" class="main-contact">
     <h1 class="section-headline">Contact Me</h1>
-    <p style="text-align: center; margin: 40px auto">お気軽にお問い合わせください。</p>
 
     <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfO3Z8HVN6oR3vdERnQz_EFz4kD8ilQtmEgBajzWa9KpKWww/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
       <div class="form-item">
         <label class="form-label" for="field-name">名前・会社名<span class="form-required">※必須</span></label>
-        <input name="entry.2005620554" id="field-name" class="form-input" placeholder="your name" type="text" required="required"/>
+        <input name="entry.2005620554" id="field-name" class="form-input" placeholder="山田太郎" type="text" required="required"/>
       </div>
 
       <div class="form-item">
@@ -163,19 +181,21 @@
   </section>
 
 
+  <!-- footer -->
   <footer>
     <p class="copyright">© 2022 Ryuji Morimoto All Rights Reserved.</p>
   </footer>
 
+
+  <!-- js読み込み -->
+  <script src="./assets/js/particles.min.js"></script>
   <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/move.js"></script>
   <script type="text/javascript">
     let submitted = false;
   </script>
-  <iframe
-    name="hidden_iframe"
-    id="hidden_iframe"
-    style="display: none"
-    onload="if(submitted){window.location='formResponse.html';}">
-  </iframe>
+
+  <!-- 問い合わせフォームの送信後ページ -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='formResponse.html';}"></iframe>
 </body>
 </html>
