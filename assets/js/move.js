@@ -14,10 +14,10 @@ window.addEventListener('scroll', function () {
     document.body.style.backgroundColor = '#ffffff'; //contactの背景色は#ffffff 白
   }
   else if (scroll > main_works - windowHeight / 1.5) {
-    document.body.style.backgroundColor = '#ffc247'; //worksの背景色は#ffc247 オレンジ
+    document.body.style.backgroundColor = '#8be871'; //worksの背景色は#8be871 緑
   }
   else if (scroll > main_skill - windowHeight / 1.5) {
-    document.body.style.backgroundColor = '#8be871'; //skillの背景色は#8be871 緑
+    document.body.style.backgroundColor = '#ffc247'; //skillの背景色は#ffc247 オレンジ
   }
   else if (scroll > main_about - windowHeight/1.4) {
     document.body.style.backgroundColor = '#b6e6e4'; //aboutの背景色は#b6e6e4 水色
